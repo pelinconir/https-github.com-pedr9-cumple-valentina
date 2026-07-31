@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+ background: radial-gradient(circle, #f35f82, #e61111);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  color: white;
+}
+
+.segunda {
+  background: radial-gradient(circle, #f35f82, #e61111);
+}
+
+.card {
+  width: 90%;
+  max-width: 750px;
+
+  padding: 45px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 2px solid #ffd700;
+
+  border-radius: 25px;
+
+  box-shadow: 0 0 50px gold;
+
+  z-index: 5;
+}
+
+h1 {
+  font-size: 48px;
+
+  color: #ffd700;
+
+  text-shadow: 0 0 25px gold;
+}
+
+h2 {
+  font-size: 30px;
+
+  margin: 15px;
+
+  font-weight: 200;
+}
+
+p {
+  font-size: 22px;
+
+  line-height: 1.7;
+
+  color: #ddd;
+}
+
+.foto img {
+  width: 340px;
+
+  height: 300px;
+
+  object-fit: cover;
+
+  border-radius: 25px;
+
+  border: 3px solid gold;
+
+  margin: 30px;
+
+  box-shadow: 0 0 50px gold;
+}
+
+button {
+  margin-top: 30px;
+
+  padding: 18px 45px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background: #ffd700;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.1);
+
+  box-shadow: 0 0 30px gold;
+}
+
+.particula {
+  position: fixed;
+
+  font-size: 30px;
+
+  z-index: 90;
+}
+
+.nombre {
+  animation: aparecer 3s;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
