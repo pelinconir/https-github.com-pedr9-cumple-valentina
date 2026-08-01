@@ -1,133 +1,342 @@
 /* ===================================
-   RESPONSIVE
+   RESET
 =================================== */
 
-/* Pantallas grandes */
-@media (min-width: 1400px){
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
 
-    .card{
-        max-width:900px;
-        padding:60px;
+/* ===================================
+   BODY
+=================================== */
+
+body{
+
+    width:100%;
+    min-height:100vh;
+
+    background:radial-gradient(circle,#f35f82,#e61111);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    color:#fff;
+
+    padding:20px;
+
+}
+
+.segunda{
+    background:radial-gradient(circle,#f35f82,#e61111);
+}
+
+/* ===================================
+   CONTENEDOR
+=================================== */
+
+.container{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+}
+
+/* ===================================
+   TARJETA
+=================================== */
+
+.card{
+
+    width:min(95%,750px);
+
+    padding:clamp(20px,4vw,45px);
+
+    text-align:center;
+
+    background:rgba(255,255,255,.08);
+
+    border:2px solid gold;
+
+    border-radius:25px;
+
+    box-shadow:0 0 50px gold;
+
+    backdrop-filter:blur(10px);
+
+    z-index:5;
+
+}
+
+/* ===================================
+   TITULOS
+=================================== */
+
+h1{
+
+    font-size:clamp(30px,6vw,48px);
+
+    color:#ffd700;
+
+    text-shadow:0 0 25px gold;
+
+}
+
+h2{
+
+    font-size:clamp(20px,4vw,30px);
+
+    margin:15px 0;
+
+    font-weight:200;
+
+}
+
+p{
+
+    font-size:clamp(16px,3vw,22px);
+
+    line-height:1.7;
+
+    color:#ddd;
+
+    margin-top:15px;
+
+}
+
+/* ===================================
+   FOTO
+=================================== */
+
+.foto{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:25px 0;
+
+}
+
+.foto img{
+
+    width:100%;
+
+    max-width:340px;
+
+    height:auto;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    border:3px solid gold;
+
+    display:block;
+
+    box-shadow:0 0 50px gold;
+
+}
+
+/* ===================================
+   BOTON
+=================================== */
+
+button{
+
+    margin-top:30px;
+
+    width:100%;
+    max-width:320px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ffd700;
+
+    color:#000;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 30px gold;
+
+}
+
+/* ===================================
+   PARTICULAS
+=================================== */
+
+.particula{
+
+    position:fixed;
+
+    font-size:30px;
+
+    z-index:90;
+
+    pointer-events:none;
+
+}
+
+/* ===================================
+   ANIMACION
+=================================== */
+
+.nombre{
+
+    animation:aparecer 3s;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(0);
+
     }
 
-    h1{
-        font-size:60px;
-    }
+    to{
 
-    h2{
-        font-size:38px;
-    }
+        opacity:1;
 
-    p{
-        font-size:26px;
-    }
+        transform:scale(1);
 
-    .foto img{
-        width:420px;
-        height:380px;
     }
 
 }
 
-/* Tablets */
-@media (max-width: 992px){
+/* ===================================
+   TABLETS
+=================================== */
+
+@media (max-width:992px){
 
     .card{
         width:95%;
-        padding:35px;
-    }
-
-    h1{
-        font-size:40px;
-    }
-
-    h2{
-        font-size:26px;
-    }
-
-    p{
-        font-size:20px;
     }
 
     .foto img{
-        width:280px;
-        height:260px;
+        max-width:300px;
     }
 
 }
 
-/* Celulares */
+/* ===================================
+   CELULARES
+=================================== */
+
 @media (max-width:768px){
 
     body{
-        min-height:100vh;
-        overflow-x:hidden;
-        padding:20px;
+
+        padding:15px;
+
     }
 
     .card{
-        width:100%;
+
         padding:25px;
+
         border-radius:20px;
+
     }
 
     h1{
-        font-size:32px;
+
+        line-height:1.2;
+
     }
 
     h2{
-        font-size:22px;
+
         margin:10px 0;
+
     }
 
     p{
-        font-size:17px;
+
         line-height:1.6;
+
     }
 
     .foto img{
-        width:100%;
-        max-width:280px;
-        height:auto;
-        margin:20px auto;
-        display:block;
+
+        max-width:260px;
+
     }
 
     button{
+
         width:100%;
-        max-width:300px;
-        padding:15px;
+
         font-size:18px;
+
+        padding:16px;
+
     }
 
 }
 
-/* Celulares pequeños */
+/* ===================================
+   CELULARES PEQUEÑOS
+=================================== */
+
 @media (max-width:480px){
 
+    body{
+
+        padding:10px;
+
+    }
+
     .card{
+
         padding:18px;
-    }
 
-    h1{
-        font-size:26px;
-    }
-
-    h2{
-        font-size:19px;
-    }
-
-    p{
-        font-size:15px;
     }
 
     .foto img{
+
         max-width:220px;
+
     }
 
     button{
+
         font-size:16px;
+
         padding:14px;
+
     }
 
 }
